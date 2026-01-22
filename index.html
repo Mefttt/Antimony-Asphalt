@@ -33,7 +33,7 @@
         .product-card:hover { border-color: #555; transform: translateY(-15px); }
         .product-img { width: 100%; height: 350px; object-fit: contain; background-color: #111; padding: 20px; margin-bottom: 30px; border: 1px solid #222; }
 
-        /* --- PROCESS --- */
+        /* --- PROCESS / BACKSTORY --- */
         .process-section { padding: 120px 8%; background: #050505; border-top: 1px solid #222; }
         .process-container { max-width: 1100px; margin: 0 auto; }
         .process-content { display: flex; gap: 60px; align-items: flex-start; line-height: 1.8; color: #888; text-align: justify; }
@@ -88,7 +88,7 @@
     <header class="hero">
         <div class="hero-banner-frame">
             <h1>Antimony & Asphalt</h1>
-            <p>Sigma.</p>
+            <p>Metallic Edge meets Urban Depth</p>
             <button class="cta-button" onclick="scrollToSection('products')">Experience the Scent</button>
         </div>
     </header>
@@ -96,17 +96,17 @@
     <section id="products" class="product-section">
         <div class="product-grid">
             <div class="product-card" onclick="openDetail('Marshmallow Wreck')">
-                <img src="10.png" alt="Marshmallow Wreck" class="product-img">
+                <img src="marsh.png" alt="Marshmallow Wreck" class="product-img">
                 <h3>Marshmallow Wreck</h3>
                 <p>$199 • Sweet Smoke • Steel</p>
             </div>
             <div class="product-card" onclick="openDetail('Iron Valley Rose')">
-                <img src="11.png" alt="Iron Valley Rose" class="product-img">
+                <img src="rose.png" alt="Iron Valley Rose" class="product-img">
                 <h3>Iron Valley Rose</h3>
                 <p>$160 • Oxidized Petals • Rust</p>
             </div>
             <div class="product-card" onclick="openDetail('First Class Alcoholic')">
-                <img src="12.png" alt="First Class Alcoholic" class="product-img">
+                <img src="wine.png" alt="First Class Alcoholic" class="product-img">
                 <h3>First Class Alcoholic</h3>
                 <p>$150 • Oak Cask • Asphalt</p>
             </div>
@@ -119,9 +119,9 @@
             <div class="process-content">
                 <div class="iso-frame"><img src="iso.png" alt="ISO E Super Molecule"></div>
                 <div>
-                    <p>Antimony & Asphalt was forged in the grey spaces between urban decay and high-end industrialism. Our journey began by wandering the city at 3:00 AM, capturing the exact olfactory profile of rain hitting hot pavement and the mineral tang of cold iron cooling under a moonlit sky.</p>
+                    <p>Antimony & Asphalt was forged in the grey spaces between urban decay and high-end industrialism. Our philosophy is rooted in the belief that the modern world doesn't need to be masked by traditional florals; it needs to be understood through its own raw chemistry. We began our journey by wandering the city at 3:00 AM, capturing the exact olfactory profile of rain hitting hot pavement and the mineral tang of cold iron cooling under a moonlit sky. This isn't just perfumery—it is a liquid documentation of the city's pulse.</p>
                     <br>
-                    <p>What truly sets us apart is our radical approach to <span class="accent-text">ISO E Super</span>. While the rest of the industry hides this aroma-chemical as a subtle fixative, we treat it as our primary architecture. This molecule provides a pheromonic cedar-wood quality that reacts uniquely with individual body heat, creating an invisible, magnetic aura.</p>
+                    <p>What truly sets us apart is our radical approach to <span class="accent-text">ISO E Super</span>. While the rest of the industry hides this aroma-chemical as a subtle fixative in the background, we treat it as our primary architecture. This synthetic molecule provides a velvety, pheromonic cedar-wood quality that creates an invisible aura around the wearer, reacting uniquely with individual body heat to form a scent that is entirely your own. By leveraging an unprecedented concentration of iso e super, we achieve a haunting longevity and a structural depth that natural extracts simply cannot mimic. At Antimony & Asphalt, we embrace the synthetic grit that gives the urban landscape its soul.</p>
                 </div>
             </div>
         </div>
@@ -161,9 +161,9 @@
                 <form onsubmit="handleFinalPurchase(event)">
                     <div class="form-group"><label>Full Name</label><input type="text" placeholder="John Pork" required></div>
                     <div class="form-group"><label>Shipping Address</label><input type="text" placeholder="No. 889 Cuihua Road, Kaohsiung" required></div>
-                    <div class="form-group"><label>Credit Card</label><input type="text" placeholder="0000 0000 0000 0000" required></div>
+                    <div class="form-group"><label>Credit Card Number</label><input type="text" placeholder="0000 0000 0000 0000" required></div>
                     <div style="display: flex; gap: 15px;">
-                        <div class="form-group" style="flex: 2;"><label>Expiry</label><input type="text" placeholder="MM/YY" required></div>
+                        <div class="form-group" style="flex: 2;"><label>Expiry Date</label><input type="text" placeholder="MM/YY" required></div>
                         <div class="form-group" style="flex: 1;"><label>CVV</label><input type="text" placeholder="123" required></div>
                     </div>
                     <button type="submit" class="checkout-btn">Complete Purchase</button>
@@ -206,9 +206,9 @@
         function closeOverlays() { document.querySelectorAll('.overlay').forEach(o => o.style.display = 'none'); document.body.style.overflow = 'auto'; }
 
         const productData = {
-            "Marshmallow Wreck": { img: "13.png", price: 199, desc: "Brutalist contrast. Soft sugar meets cold steel." },
-            "Iron Valley Rose": { img: "14.png", price: 160, desc: "Beauty surviving the machine age. Oxide and damp soil." },
-            "First Class Alcoholic": { img: "15.png", price: 150, desc: "Oak spirits and hot asphalt. Midnight in the city." }
+            "Marshmallow Wreck": { img: "13.png", price: 199, desc: "A brutalist exploration of contrast. Marshmallow Wreck captures the precise moment where softness meets destruction. The initial strike of charred sugar is quickly grounded by the sharp, metallic tang of cold steel." },
+            "Iron Valley Rose": { img: "14.png", price: 160, desc: "Beauty surviving the machine age. This fragrance opens with the scent of oxidized petals caught in a storm of rust and damp soil. A floral scent replaced with haunting mineral depth." },
+            "First Class Alcoholic": { img: "15.png", price: 150, desc: "An unapologetic tribute to urban grit. First Class Alcoholic blends the deep, amber warmth of oak-aged spirits with the raw, chemical heat of sun-drenched asphalt." }
         };
 
         function openDetail(name) {
